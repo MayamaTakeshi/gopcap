@@ -2,12 +2,12 @@
 package pcap
 
 /*
-#cgo linux LDFLAGS: -lpcap
+#cgo linux LDFLAGS: -L ./libpcap/linux/lib -lpcap -static
+#cgo linux CFLAGS: -I ./libpcap/linux/include
 #cgo freebsd LDFLAGS: -lpcap
 #cgo darwin LDFLAGS: -lpcap
-#cgo windows CFLAGS: -I C:/WpdPack/Include
-#cgo windows,386 LDFLAGS: -L C:/WpdPack/Lib -lwpcap
-#cgo windows,amd64 LDFLAGS: -L C:/WpdPack/Lib/x64 -lwpcap
+#cgo windows CFLAGS: -I ./libpcap/win/lib
+#cgo windows LDFLAGS: -L ./libpcap/win/lib -lpcap -static
 #include <stdlib.h>
 #include <pcap.h>
 
