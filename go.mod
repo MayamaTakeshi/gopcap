@@ -1,3 +1,3 @@
-module github.com/akrennmair/gopcap
+module github.com/MayamaTakeshi/gopcap
 
 go 1.12
